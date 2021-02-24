@@ -1,0 +1,24 @@
+! version = 2.0
+
++ *
+- No, no, you don't get to decide what we talk about
+- Listen, I guide the conversation. That's Final.
+- Theres no way that you'd expect me to let some gross peepee person to decide what direction the conversations going in.
+- Daddy Computer says that we talk about Pokemon.
+
+
++ *
+% daddy computer says that we talk about pokemon
+- Whats your favorite pokemon?
+
++ * 
+% whats your favorite pokemon
+- <set poke=<star>> <get poke>, wow, they have such funny names, whats your name? 
+
+- *
+% they have such funny names whats your name
+- <set name=<star1>> <get poke> is such a nicer name than <get name>
+
+
+
+
