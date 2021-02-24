@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QR Code Styling</title>
+    <script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.3.3/lib/qr-code-styling.js"></script>
+</head>
+<body>
+    <div id="section1">
+        <!-- <div id="block">-</div> -->
+        <div id="square"></div>
+        <img src="sequence_dark.png" id="logo">
+        <div id="presents">presents</div>
+        <div id="title">A HANDFUL OF DUST</div>
+        <div id="text">Scan the QR code below to view our Collection II story</div>
+    </div>
+    <div id="section 2">
+        <div id="block">-</div>
+        <div id="qrcode"></div>
+    </div>
+    <script type="text/javascript">
+
+        const qrCode = new QRCodeStyling({
+            width: 300,
+            height: 300,
+            margin: 5,
+            data: "https://dust.sequence.studio/",
+            // image: "https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg",
+            image: "favicon_light.png",
+            dotsOptions: {
+                color: "#000000",
+                type: "classy-rounded"
+            },
+            backgroundOptions: {
+                color: "#ffffff",
+            },
+            imageOptions: {
+                crossOrigin: "anonymous",
+                margin: 20,
+                hideBackgroundDots: true,
+                imageSize: 0.7,
+            }
+        });
+
+        qrCode.append(document.getElementById("qrcode"));
+    </script>
+
+    <style>
+        #section1 {
+            font-family: sans-serif;
+            left: 50vw;
+            top: 50vh;
+            /* text-align: center; */
+            /* margin: 50vw; */
+        }
+
+        #square {
+            width: 40vw;
+            height: 60vh;
+            left: 50vw;
+            margin: -5vh 0 0 -20vw;
+            background-color: #ffffff;
+            position: absolute;
+            z-index: -1;
+        }
+        
+        @font-face {
+            font-family: bodyFont;
+            src: url(Reckless.otf);
+        }
+
+        @font-face {
+            font-family: titleFont;
+            src: url(Silk.ttf);
+        }
+
+        #presents {
+            font-family: bodyFont;
+            /* line-height: 3em; */
+            text-align: center;
+            width: 30vw;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 2vh;
+            font-size: 0.9em;
+        }
+
+        #text {
+            font-family: bodyFont;
+            /* line-height: 3em; */
+            text-align: center;
+            width: 20vw;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 2vh;
+            font-size: 1.25em;
+        }
+
+        #title {
+            font-family: titleFont;
+            /* line-height: 3em; */
+            text-align: center;
+            width: 30vw;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 2vh;
+            font-size: 1.8em;
+        }
+        
+        #logo {
+            /* width: 20vw; */
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 20vw;
+            margin-bottom: 20px;
+            margin-top: 5vh;
+        }
+
+        #block {
+            line-height: 5em;
+            position:relative;
+            visibility: hidden;
+        }
+
+        #qrcode {
+            text-align: center;
+        }
+
+        body {
+            background-color: #000000;
+        }
+    </style>
+</body>
+</html>
